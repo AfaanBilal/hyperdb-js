@@ -1,0 +1,27 @@
+{
+  "name": "hyperdb-js",
+  "version": "0.1.0",
+  "description": "HyperDB Client for JavaScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AfaanBilal/hyperdb-js.git"
+  },
+  "keywords": [
+    "hyperdb",
+    "client"
+  ],
+  "author": "Afaan Bilal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AfaanBilal/hyperdb-js/issues"
+  },
+  "homepage": "https://github.com/AfaanBilal/hyperdb-js#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
