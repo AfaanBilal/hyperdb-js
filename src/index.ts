@@ -18,7 +18,7 @@ export class HyperDB {
 
     status = {
         PONG: "PONG",
-        TRUE: "Yes",
+        TRUE: "YES",
         OK: "OK",
     };
 

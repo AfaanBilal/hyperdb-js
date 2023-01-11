@@ -8,51 +8,65 @@ Author: **[Afaan Bilal](https://afaan.dev)**
 
 ## Installation
 ````
-$ npm i hyperdb-js
+npm i hyperdb-js
 ````
 
 ## Example usage
-````ts
-import HyperDB from "hyperdb-js";
+````js
+import { HyperDB } from "hyperdb-js";
 
 // Setup with address (default: http://localhost:8765)
 const hyperdb = new HyperDB("http://localhost:8765");
 
+let r;
+
 // Ping the server
-hyperdb.ping(); // true
+r = await hyperdb.ping();
+console.log(r); // true
 
 // Get the version number
-hyperdb.version(); // "[HyperDB v0.1.0 (https://afaan.dev)]"
+r = await hyperdb.version();
+console.log(r); // "[HyperDB v0.1.0 (https://afaan.dev)]"
 
 // Set a value
-hyperdb.set("test", "value");
+r = await hyperdb.set("test", "value");
+console.log(r); // "value"
 
 // Check if a key is present
-hyperdb.has("test"); // true
+r = await hyperdb.has("test");
+console.log(r); // true
 
 // Get a value
-hyperdb.get("test"); // "value"
+r = await hyperdb.get("test");
+console.log(r); // "value"
 
 // Get all stored data
-hyperdb.all(); // {"test": "value"}
+r = await hyperdb.all();
+console.log(r); // {test: "value"}
 
 // Remove a key
-hyperdb.delete("test"); // true
+r = await hyperdb.delete("test");
+console.log(r); // true
 
 // Delete all stored data
-hyperdb.clear(); // true
+r = await hyperdb.clear();
+console.log(r); // true
 
 // Check if the store is empty
-hyperdb.empty(); // true
+r = await hyperdb.empty();
+console.log(r); // true
 
 // Persist the store to disk
-hyperdb.save(); // true
+r = await hyperdb.save();
+console.log(r); // true
 
 // Reload the store from disk
-hyperdb.reload(); // true
+r = await hyperdb.reload();
+console.log(r); // true
 
 // Delete all store data from memory and disk
-hyperdb.reset(); // true
+r = await hyperdb.reset();
+console.log(r); // true
 ````
 
 ## Contributing
