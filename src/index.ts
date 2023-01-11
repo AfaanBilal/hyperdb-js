@@ -13,7 +13,7 @@ export class HyperDB {
     }
 
     async http(url: string = "", method: string = "GET", body: string = ""): Promise<any> {
-        return await (await fetch(this.address + "/" + url, body ? { method } : { method, body })).text();
+        return await (await fetch(this.address + "/" + url, body == "" ? { method } : { method, body })).text();
     }
 
     status = {
