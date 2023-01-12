@@ -1,6 +1,6 @@
 {
   "name": "hyperdb-js",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "HyperDB Client for JavaScript",
   "main": "dist/index.js",
   "scripts": {
