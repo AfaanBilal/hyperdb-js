@@ -18,6 +18,10 @@ import { HyperDB } from "hyperdb-js";
 // Setup with address (default: http://localhost:8765)
 const hyperdb = new HyperDB("http://localhost:8765");
 
+// OR
+// Setup with address and authentication
+const hyperdb = new HyperDB("http://localhost:8765", "username", "password");
+
 let r;
 
 // Ping the server
